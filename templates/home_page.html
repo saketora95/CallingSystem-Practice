@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="這是個人學習與練習所使用的 Repo，主要目標為透過 Flask 製作基於 Web 架構所構成的叫號系統。" />
+        <meta name="author" content="CallingSystem-Practice | Tora95" />
+        <meta property="og:image" content="/static/images/icon.png" />
+
+        <title>CallingSystem-Practice | Tora95</title>
+        <link rel="icon" type="image/x-icon" href="/static/images/icon.png" />
+
+        <!-- Bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+        <!-- CSS -->
+        <link href="{{ url_for('static', filename = 'style/main_style.css') }}" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="d-flex align-items-center" style="min-height: 100vh">
+            <div class="container-sm main-content pt-3 pb-3">
+                <h1>Tora95 叫號系統試驗場</h1>
+                <hr />
+                <p>這是個人學習與練習所使用的 Repo，主要目標為透過 Flask 製作基於 Web 架構所構成的叫號系統。</p>
+                <p>請依據您的需求前往對應的功能頁面：</p>
+
+                <div class="container">
+                    <div class="row text-center">
+                        <div class="col p-2">
+                            前臺功能
+                        </div>
+                        <div class="col p-2">
+                            後臺功能
+                        </div>
+                    </div>
+                    <div class="row text-center">
+                        <div class="col">
+                            <div class="d-grid gap-2 col-6 mx-auto">
+                                <button class="btn btn-info" type="button" onclick="location.href='/counter';">櫃臺叫號顯示頁面</button>
+                                <button class="btn btn-info" type="button" onclick="location.href='/ticket-machine';">取票頁面</button>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="d-grid gap-2 col-6 mx-auto">
+                                <button class="btn btn-info" type="button" onclick="location.href='/login';">登入頁面</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </body>
+</html>

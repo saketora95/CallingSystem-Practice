@@ -1,0 +1,18 @@
+body {
+    background-color: rgb(64, 64, 64);
+}
+
+.main-content {
+    background-color: rgb(255, 255, 255);
+    color: rgb(22, 48, 71);
+    max-width: 720px;
+    border-radius: 20px 20px 0px 20px;
+}
+
+.main-content h1 {
+    text-align: center;
+}
+
+.waring-msg {
+    color: red;
+}
