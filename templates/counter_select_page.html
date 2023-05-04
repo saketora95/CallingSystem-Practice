@@ -5,10 +5,10 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="這是個人學習與練習所使用的 Repo，主要目標為透過 Flask 製作基於 Web 架構所構成的叫號系統。" />
-        <meta name="author" content="櫃臺控制臺 | Tora95" />
+        <meta name="author" content="櫃臺選擇頁面 | Tora95" />
         <meta property="og:image" content="{{ url_for('static', filename = 'images/icon.png') }}" />
 
-        <title>{{ counter_id }} 號櫃臺控制臺 | Tora95</title>
+        <title>櫃臺選擇頁面 | Tora95</title>
         <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename = 'images/icon.png') }}" />
 
         <!-- Bootstrap -->
@@ -22,9 +22,17 @@
     <body>
         <div class="d-flex align-items-center" style="min-height: 100vh">
             <div class="container-sm main-content pt-3 pb-3">
-                <h1 class="m-3">Tora95 叫號系統 | {{ counter_id }} 號櫃臺控制臺</h1>
+                <h1 class="m-3">Tora95 叫號系統 | 櫃臺選擇頁面</h1>
                 <hr />
-                <p>{{ user_id }} 您好，這裡是 {{ counter_id }} 號櫃臺的控制臺。</p>
+                <p>您好，請按下您想要顯示的櫃臺編號：</p>
+
+                <form action="#" method="post">
+                    {% for i in range(1, max_counter_number + 1) %}
+                        <div class="d-grid gap-2 p-3">
+                            <button type="submit" class="btn btn-info" name="counterId" value="{{ i }}">{{ i }} 號櫃臺</button>
+                        </div>
+                    {% endfor %}
+                </form>
 
             </div>
         </div>
